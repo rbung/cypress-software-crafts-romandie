@@ -91,7 +91,9 @@ jobs:
           record: true
           parallel: true
           group: "UI - Chrome"
-          spec: cypress/tests/ui/*
+          spec: |
+            cypress/tests/ui/*
+            cypress/tests/meetup/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -134,7 +136,9 @@ jobs:
           record: true
           parallel: true
           group: "UI - Chrome - Mobile"
-          spec: cypress/tests/ui/*
+          spec: |
+            cypress/tests/ui/*
+            cypress/tests/meetup/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -178,7 +182,9 @@ jobs:
           record: true
           parallel: true
           group: "UI - Firefox"
-          spec: cypress/tests/ui/*
+          spec: |
+            cypress/tests/ui/*
+            cypress/tests/meetup/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -223,7 +229,9 @@ jobs:
           record: true
           parallel: true
           group: "UI - Firefox - Mobile"
-          spec: cypress/tests/ui/*
+          spec: |
+            cypress/tests/ui/*
+            cypress/tests/meetup/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -263,7 +271,9 @@ jobs:
           record: true
           parallel: true
           group: "UI - Electron - Windows"
-          spec: cypress/tests/ui/*
+          spec: |
+            cypress/tests/ui/*
+            cypress/tests/meetup/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
