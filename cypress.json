@@ -16,5 +16,10 @@
       "url": "http://localhost:3001/__coverage__"
     }
   },
+
+  "component": {
+    "testFiles": "**/*.test.{jsx,tsx}",
+    "componentFolder": "src/components"
+  },
   "experimentalStudio": true
 }

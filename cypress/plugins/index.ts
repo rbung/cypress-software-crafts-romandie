@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import Promise from "bluebird";
 import { percyHealthCheck } from "@percy/cypress/task";
 import codeCoverageTask from "@cypress/code-coverage/task";
+import injectDevServer from "@cypress/react/plugins/react-scripts";
 
 dotenv.config({ path: ".env.local" });
 dotenv.config();
@@ -68,5 +69,6 @@ export default (on, config) => {
   });
 
   codeCoverageTask(on, config);
+  injectDevServer(on, config);
   return config;
 };
