@@ -19,7 +19,7 @@
 
   "component": {
     "testFiles": "**/*.test.{jsx,tsx}",
-    "componentFolder": "src/components"
+    "componentFolder": "cypress/ct-tests"
   },
   "experimentalStudio": true
 }

@@ -1,7 +1,7 @@
 /// <reference types="@testing-library/cypress" />
 import { mount } from "@cypress/react";
-import UsersList from "./UsersList";
-import { DefaultPrivacyLevel } from "models";
+import UsersList from "../../src/components/UsersList";
+import { DefaultPrivacyLevel } from "../../src/models";
 
 it("renders learn react link", () => {
   const user1 = {
