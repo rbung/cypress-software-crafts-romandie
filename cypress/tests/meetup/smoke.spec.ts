@@ -30,10 +30,10 @@ describe("smoke tests", () => {
       cy.get("[data-test=sidenav-toggle").click();
     }
     cy.get("[data-test=sidenav-user-settings] ").click();
-    cy.get("[data-test=user-settings-firstName-input]").should("not.be.empty");
-    cy.get("[data-test=user-settings-lastName-input]").should("not.be.empty");
-    cy.get("[data-test=user-settings-email-input]").should("not.be.empty");
-    cy.get("[data-test=user-settings-phoneNumber-input]").should("not.be.empty");
+    cy.get("[data-test=user-settings-firstName-input]").should("not.have.value", "");
+    cy.get("[data-test=user-settings-lastName-input]").should("not.have.value", "");
+    cy.get("[data-test=user-settings-email-input]").should("not.have.value", "");
+    cy.get("[data-test=user-settings-phoneNumber-input]").should("not.have.value", "");
 
     if (isMobile()) {
       cy.get("[data-test=sidenav-toggle").click();
