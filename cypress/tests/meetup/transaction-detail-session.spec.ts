@@ -1,16 +1,28 @@
+Cypress.config({
+  experimentalSessionSupport: true,
+});
+
+const login = (name: string, password: string) => {
+  cy.session(
+    [name, password],
+    () => {
+      cy.login(name, password);
+    },
+    {
+      // optional
+      validate: () => {
+        // visit a private page
+        // cy.visit("/personal");
+        // better option: use API call
+        // cy.request("http://localhost:3001/checkAuth");
+      },
+    }
+  );
+};
+
 describe("transaction details", function () {
   beforeEach(function () {
-    cy.visit("/signin");
-    cy.location("pathname").should("eq", "/signin");
-    cy.get("#username").type("Katharina_Bernier");
-    cy.get("#password").type("s3cret{enter}");
-    cy.location("pathname").should("equal", "/");
-
-    // TODO 1: maybe use a custom command ?
-    // cy.login("Katharina_Bernier", "s3cret");
-
-    // TODO 2: take a shortcut ?
-    // cy.loginByXstate("Katharina_Bernier", "s3cret");
+    login("Katharina_Bernier", "s3cret");
   });
 
   it("should display the transaction (from DB)", function () {
